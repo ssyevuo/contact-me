@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Request Form</title>
+</head>
+<body>
+    <div class="container">
+        <header class="form-header">
+            <h1>Let's Work Together</h1>
+            <p>Fill out this form and I'll get back to you within 24 hours</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+            </div>
+        </header>
+
+        <form id="projectForm" class="project-form">
+            
+            <!-- SECTION 1: Personal Information -->
+            <fieldset class="form-section">
+                <legend>Personal Information</legend>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" placeholder="John">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Doe">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company/Organization</label>
+                    <input type="text" id="company" name="company" placeholder="Optional">
+                </div>
+            </fieldset>
+
+            <!-- SECTION 2: Project Details -->
+            <fieldset class="form-section">
+                <legend>Project Details</legend>
+
+                <div class="form-group">
+                    <label class="main-label">What type of project do you need? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="projectType" value="website">
+                            <span class="radio-custom"></span>
+                            Website Development
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="projectType" value="webapp">
+                            <span class="radio-custom"></span>
+                            Web Application
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="projectType" value="mobile">
+                            <span class="radio-custom"></span>
+                            Mobile App
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="projectType" value="ecommerce">
+                            <span class="radio-custom"></span>
+                            E-commerce Store
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="projectType" value="other">
+                            <span class="radio-custom"></span>
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectDescription">Project Description <span class="required">*</span></label>
+                    <textarea 
+                        id="projectDescription" 
+                        name="projectDescription" 
+                        rows="6" 
+                        placeholder="Describe your project in detail..."
+                        maxlength="500"
+                    ></textarea>
+                    <div class="character-count">
+                        <span>0</span> / 500 characters
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="main-label">What features do you need? <span class="required">*</span> <span class="sub-label">(Select all that apply)</span></label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="responsive">
+                            <span class="checkbox-custom"></span>
+                            Responsive Design
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="cms">
+                            <span class="checkbox-custom"></span>
+                            Content Management System
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="auth">
+                            <span class="checkbox-custom"></span>
+                            User Authentication
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="payment">
+                            <span class="checkbox-custom"></span>
+                            Payment Integration
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="api">
+                            <span class="checkbox-custom"></span>
+                            API Integration
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="features" value="analytics">
+                            <span class="checkbox-custom"></span>
+                            Analytics Dashboard
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="deadline">Preferred Deadline</label>
+                    <input type="date" id="deadline" name="deadline">
+                </div>
+            </fieldset>
+
+            <!-- SECTION 3: Budget & Files -->
+            <fieldset class="form-section">
+                <legend>Additional Information</legend>
+            
+                <!--
+                <div class="form-group">
+                    <label for="budget">Budget Range (USD) <span class="required">*</span></label>
+                    <div class="budget-display">
+                        <span class="currency">$</span><span class="amount">5,000</span>
+                    </div>
+                    <input 
+                        type="range" 
+                        id="budget" 
+                        name="budget" 
+                        min="500" 
+                        max="50000" 
+                        step="500" 
+                        value="5000"
+                        class="budget-slider"
+                    >
+                    <div class="budget-labels">
+                        <span>$500</span>
+                        <span>$50,000+</span>
+                    </div>
+                </div>
+            -->
+
+                <div class="form-group">
+                    <label for="timeline">Expected Timeline <span class="required">*</span></label>
+                    <select id="timeline" name="timeline">
+                        <option value="">-- Select timeline --</option>
+                        <option value="urgent">Urgent (1-2 weeks)</option>
+                        <option value="short">Short-term (1 month)</option>
+                        <option value="medium">Medium-term (2-3 months)</option>
+                        <option value="long">Long-term (3+ months)</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="referenceFiles">Upload Reference Files <span class="optional">(Optional)</span></label>
+                    <div class="file-upload-wrapper">
+                        <input 
+                            type="file" 
+                            id="referenceFiles" 
+                            name="referenceFiles" 
+                            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                            multiple
+                            class="file-input"
+                        >
+                        <label for="referenceFiles" class="file-label">
+                            <span class="file-icon">📎</span>
+                            <span class="file-text">Choose files or drag here</span>
+                        </label>
+                    </div>
+                    <small class="help-text">Max 5MB per file. Accepted: PDF, DOC, JPG, PNG</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="hearAbout">How did you hear about me?</label>
+                    <select id="hearAbout" name="hearAbout">
+                        <option value="">-- Select --</option>
+                        <option value="google">Google Search</option>
+                        <option value="social">Social Media</option>
+                        <option value="referral">Referral</option>
+                        <option value="portfolio">Portfolio Website</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- SECTION 4: Agreement -->
+            <fieldset class="form-section">
+                <legend>Terms & Conditions</legend>
+
+                <div class="form-group">
+                    <label class="checkbox-label agreement-label">
+                        <input type="checkbox" id="terms" name="terms">
+                        <span class="checkbox-custom"></span>
+                        <span>I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a> <span class="required">*</span></span>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <span class="checkbox-custom"></span>
+                        Subscribe to newsletter for updates and tips
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="reset" class="btn btn-secondary">Clear Form</button>
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
