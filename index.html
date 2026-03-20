@@ -24,31 +24,69 @@
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="firstName">First Name <span class="required">*</span></label>
-                        <input type="text" id="firstName" name="firstName" placeholder="John">
+                        <label for="firstName">First Name <span class="required" aria-label="required">*</span></label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName"
+                            aria-describedby="firstName-help firstName-error"
+                            placeholder="John"
+                            required>
+                        <small class="sr-only" id="firstName-help">Enter your legal first name</small>
+                        <span id="firstName-error" class="error-message" role="alert"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="lastName">Last Name <span class="required">*</span></label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Doe">
+                        <label for="lastName">Last Name <span class="required" aria-label="required">*</span></label>
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            aria-describedby="lastName-help lastName-error"
+                            placeholder="Doe"
+                            required>
+                        <small id="lastName-help" class="sr-only">Enter your legal last name</small>
+                        <span id="lastName-error" class="error-message" role="alert"></span>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com">
+                        <label for="email">Email Address <span class="required" aria-label="required">*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            aria-describedby="email-help email-error"
+                            placeholder="john@example.com"
+                            required>
+                        <small id="email-help" class="sr-only">Enter your email</small>
+                        <span id="email-error" class="error-message" role="alert"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number <span class="required">*</span> </label>
-                        <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000">
+                        <label for="phone">Phone Number <span class="required" aria-label="required">*</span> </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            aria-describedby="phone-help phone-error"
+                            placeholder="+254 700 000 000"
+                            required>
+                        <small id="phone-help" class="sr-only" >Enter your phone number</small>
+                        <span id="phone-error" class="error-message" role="alert"></span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="company">Company/Organization</label>
-                    <input type="text" id="company" name="company" placeholder="Optional">
+                    <input 
+                        type="text" 
+                        id="company" 
+                        name="company" 
+                        aria-describedby="company-help"
+                        placeholder="Optional">
+                    <small id="company-help" class="sr-only">Enter the name of your company</small>
                 </div>
             </fieldset>
 
@@ -60,27 +98,42 @@
                     <label class="main-label">What type of project do you need? <span class="required">*</span></label>
                     <div class="radio-group">
                         <label class="radio-label">
-                            <input type="radio" name="projectType" value="website">
+                            <input 
+                                type="radio" 
+                                name="projectType" 
+                                value="website">
                             <span class="radio-custom"></span>
                             Website Development
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="projectType" value="webapp">
+                            <input 
+                                type="radio" 
+                                name="projectType" 
+                                value="webapp">
                             <span class="radio-custom"></span>
                             Web Application
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="projectType" value="mobile">
+                            <input 
+                                type="radio" 
+                                name="projectType" 
+                                value="mobile">
                             <span class="radio-custom"></span>
                             Mobile App
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="projectType" value="ecommerce">
+                            <input 
+                                type="radio" 
+                                name="projectType" 
+                                value="ecommerce">
                             <span class="radio-custom"></span>
                             E-commerce Store
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="projectType" value="other">
+                            <input 
+                                type="radio" 
+                                name="projectType" 
+                                value="other">
                             <span class="radio-custom"></span>
                             Other
                         </label>
@@ -93,53 +146,82 @@
                         id="projectDescription" 
                         name="projectDescription" 
                         rows="6" 
+                        aria-describedby="projectDescription-help"
                         placeholder="Describe your project in detail..."
                         maxlength="500"
                     ></textarea>
-                    <!-- <div class="character-count">
-                        <span>0</span> / 500 characters
-                    </div> -->
+                    <small id="projectDescription-help"class="sr-only" >Describe your project in detail</small>
                 </div>
 
                 <div class="form-group">
-                    <label class="main-label">What features do you need? <span class="required">*</span> <span class="sub-label">(Select all that apply)</span></label>
+                    <label class="main-label">What features do you need? <span class="required" aria-label="required">*</span> <span class="sub-label">(Select all that apply)</span></label>
                     <div class="checkbox-grid">
                         <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="responsive">
+                            <input 
+                                type="checkbox" 
+                                name="features" 
+                                value="responsive"
+                                aria-describedby="features-help">
                             <span class="checkbox-custom"></span>
                             Responsive Design
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="cms">
+                            <input 
+                                type="checkbox" 
+                                name="features" 
+                                value="cms"
+                                aria-describedby="features-help">
                             <span class="checkbox-custom"></span>
                             Content Management System
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="auth">
+                            <input 
+                                type="checkbox" 
+                                name="features" 
+                                value="auth"
+                                aria-describedby="features-help">
                             <span class="checkbox-custom"></span>
                             User Authentication
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="payment">
+                            <input 
+                                type="checkbox" 
+                                name="features" 
+                                value="payment"
+                                aria-describedby="features-help">
                             <span class="checkbox-custom"></span>
                             Payment Integration
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="api">
+                            <input 
+                                type="checkbox" 
+                                name="features" 
+                                value="api"
+                                aria-describedby="features-help">
                             <span class="checkbox-custom"></span>
                             API Integration
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="analytics">
+                            <input
+                                type="checkbox" 
+                                name="features" 
+                                value="analytics"
+                                aria-describedby="features-help">
                             <span class="checkbox-custom"></span>
                             Analytics Dashboard
                         </label>
                     </div>
+                    <span id="features-error" class="error-message" role="alert"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="deadline">Preferred Deadline</label>
-                    <input type="date" id="deadline" name="deadline">
+                    <input 
+                        type="date" 
+                        id="deadline" 
+                        name="deadline"
+                        aria-describedby="deadline-help">
+                    <small id="deadline-help" class="sr-only">Enter your preferred project deadline</small>
                 </div>
             </fieldset>
 
@@ -147,29 +229,6 @@
             <fieldset class="form-section">
                 <legend>Additional Information</legend>
             
-                <!--
-                <div class="form-group">
-                    <label for="budget">Budget Range (USD) <span class="required">*</span></label>
-                    <div class="budget-display">
-                        <span class="currency">$</span><span class="amount">5,000</span>
-                    </div>
-                    <input 
-                        type="range" 
-                        id="budget" 
-                        name="budget" 
-                        min="500" 
-                        max="50000" 
-                        step="500" 
-                        value="5000"
-                        class="budget-slider"
-                    >
-                    <div class="budget-labels">
-                        <span>$500</span>
-                        <span>$50,000+</span>
-                    </div>
-                </div>
-            -->
-
                 <div class="form-group">
                     <label for="timeline">Expected Timeline <span class="required">*</span></label>
                     <select id="timeline" name="timeline">
@@ -192,7 +251,9 @@
                             accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
                             multiple
                             class="file-input"
+                            aria-describedby="referenceFiles-help"
                         >
+                        <small id="referenceFiles-help" class="sr-only">Upload any reference files</small>
                         <label for="referenceFiles" class="file-label">
                             <span class="file-icon">📎</span>
                             <span class="file-text">Choose files or drag here</span>
@@ -221,7 +282,12 @@
 
                 <div class="form-group">
                     <label class="checkbox-label agreement-label">
-                        <input type="checkbox" id="terms" name="terms">
+                        <input 
+                            type="checkbox" 
+                            id="terms" 
+                            name="terms"
+                            aria-describedby="terms-help">
+                        <small id="terms-help" class="sr-only">Accept the terms and conditions</small>
                         <span class="checkbox-custom"></span>
                         <span>I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a> <span class="required">*</span></span>
                     </label>
@@ -229,7 +295,12 @@
 
                 <div class="form-group">
                     <label class="checkbox-label agreement-label">
-                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <input 
+                            type="checkbox" 
+                            id="newsletter" 
+                            name="newsletter"
+                            aria-describedby="newsletter-help">
+                        <small id="newsletter-help" class="sr-only">Subscribe to the newsletter</small>
                         <span class="checkbox-custom"></span>
                         Subscribe to newsletter for updates and tips
                     </label>

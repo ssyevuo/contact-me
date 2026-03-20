@@ -410,3 +410,32 @@ textarea {
     background: var(--light)
 }
 
+/* screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* error message */
+.error-message {
+    display: none;
+    color: #D32F2F;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    align-items: center;
+    gap: 5px;
+}
+
+.error-message::before {
+    content: '⚠ ';
+    font-weight: bold;
+}
+
+
